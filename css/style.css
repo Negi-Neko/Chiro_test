@@ -75,6 +75,51 @@ body{
 }
 
 /*-------------------------------------------
+　▽橋村先生の上に行くイラスト▽
+-------------------------------------------*/
+.page_top_btn img{
+	width:18VW;
+	animation: fuwafuwa 2s infinite;
+}
+
+.page_top_btn {
+  display: flex;
+  flex-direction: column;
+
+	position: fixed;
+	bottom: 0.5vw;
+	right: 1vw;
+	text-align: center;
+	transition: 0.3s0;
+	z-index: 300;/*position指定がされてるからこそz-indexが設定できる */
+	}
+
+  .page_top_btn p{
+    color: #fff;
+    -webkit-text-stroke: 0.15vw black;/*ベンダープレフィックス*/
+    text-shadow: 0.15vw black;/*1px赤色縁取り*/
+    font-size: 2vw;
+    margin: 0 auto;
+    margin-bottom: 1vw;
+    }
+	
+  /* 上への移動をスムーズに */
+  html{
+  scroll-behavior: smooth;
+  }
+
+  @keyframes fuwafuwa {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+    }
+/*-------------------------------------------
 　▽mainのレイアウト設定▽
 -------------------------------------------*/
 .topImg{
